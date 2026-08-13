@@ -13,3 +13,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.buttonContainer{
+    height: 70vh;
+    width: 50vw;
+    border-radius: 10px;
+    border: orange solid 2px;
+    position: absolute;
+    bottom: 0px;
+}
