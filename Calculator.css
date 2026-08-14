@@ -68,6 +68,41 @@ body {
     }
 }
 
+.OperationsBox{
+     height: 30vh;
+     width: 50vw;
+     border: solid orange 5px;
+     position: absolute;
+     top: 0;
+     border-radius: 10px;
+
+    .BasicText{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background: transparent;
+        color: grey;
+        border: none;
+        font-size: 2rem;
+        text-align: left;
+        overflow-y: auto;
+        word-break: keep-all;
+        span{
+            display: inline-block;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+
+            &:hover{
+                transform: translateY(-15px);
+                color: orange;
+            }
+        }
+    }
+    }
+
+
+
+
 @media (max-width: 600px) {
     .buttonContainer{
         width: 90vw;
@@ -78,6 +113,10 @@ body {
 
     .button{
         font-size: 1.2rem;
+}
+
+.OperationsBox{
+    width: 90vw;
 }
 }
 
@@ -92,5 +131,9 @@ width: 18vw;
 height: 18vw;
 font-size: 1rem;
 }
+}
+
+.OperationsBox{
+    width: 90vw;
 }
 }
