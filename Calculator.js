@@ -35,3 +35,28 @@ const divide = function(numbers) {
 return total
 
 }
+
+
+let firstNumber = '';
+let operator = '';
+let secondNumber = '';
+let lastNumber = '';
+
+function operate(a, b) {
+    if (operator === '+') {
+        return a + b;
+    }
+
+    else if(operator === '-') {
+        return a-b;
+    }
+
+    else if(operator === '/') {
+        return a/b;
+    }
+
+    else if(operator === '*') {
+        return a*b
+    }
+}
+
