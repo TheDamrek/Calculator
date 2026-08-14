@@ -37,10 +37,34 @@ body {
        border: orange solid 2px;
        background-color: black;
        transition: 0,2s ease-in-out;
+       color: white;
+       font-size: 1.5rem;
 
        &:hover{
         transform: scale(1.1);
        }
+
+       i.bx{
+        font-size: 2rem;
+       }
+
+
+    }
+
+    button.White {
+        color: white;
+        border: white solid 2px;
+    }
+
+    button.OrangeSign {
+        color: orange;
+        border: orange solid 2px;
+    }
+
+    button.Orange {
+        color: white;
+        background-color: orange;
+        border: orange solid 2px;
     }
 }
 
@@ -51,6 +75,10 @@ body {
 
 
     }
+
+    .button{
+        font-size: 1.2rem;
+}
 }
 
 
@@ -62,6 +90,7 @@ body {
 button{
 width: 18vw;
 height: 18vw;
+font-size: 1rem;
 }
 }
 }
