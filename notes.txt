@@ -3,3 +3,8 @@ bootstrap icons
 remix iconsheroicons
 tablericons
 streamline
+
+use ! for when a condition isn't met
+Variable Assignment Direction: In JavaScript, the variable being updated must always go on the left, and the new value goes on the right (variable = value)
+
++= since we're not adding anithing

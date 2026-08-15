@@ -95,13 +95,17 @@ const Reinitialize = document.querySelector('#Reinitialize')
 
 
 ButtonContainer.addEventListener('click', (e => {
-    if(e.target.classlist.contains('White')) return;
+    if(!e.target.classList.contains('White')) return;
     const clickedNumber = e.target.textContent;
 
     if(operator === ''){
-        clickedNumber = firstNumber
+        firstNumber += clickedNumber;
+
+        NumberScrenn.textContent = firstNumber;
     }
-    else if(operator === '=' && operator === '+' && operator === '%' && operator === '/' && operator === '-'){
-        clickedNumber = secondNumber
+    else if(operator === '=' || operator === '+' || operator === '%' || operator === '/' || operator === '-'){
+        secondNumber = clickedNumber;
+
+        NumberScreen.textContent = secondNumber
     }
 }))
