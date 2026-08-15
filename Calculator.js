@@ -1,5 +1,6 @@
-const ButtonContainer = document.querySelector('.ButtonContainer')
+const ButtonContainer = document.querySelector('.buttonContainer')
 const OperationsBox = document.querySelector('.OperationsBox')
+const NumberScreen = document.querySelector('.BasicText')
 
 const add = function(numbers) {
       let total = 0
@@ -36,6 +37,14 @@ return total
 
 }
 
+const modulo = function(numbers) {
+    let total = numbers[0]
+    for(let i = 0; i < numbers.length; i++){
+        total %= numbers[i]
+    }
+    return total
+}
+
 
 let firstNumber = '';
 let operator = '';
@@ -58,6 +67,10 @@ function operate(a, b) {
     else if(operator === '*') {
         return a*b
     }
+
+    else if(operator === '%') {
+        return a%b
+    }
 }
 
 const EqualButton = document.querySelector('#Equal')
@@ -76,8 +89,19 @@ const Eight = document.querySelector('#Eight')
 const Nine = document.querySelector('#Nine')
 const Zero = document.querySelector('#Zero')
 const Delete = document.querySelector('#Delete')
-const Modulo = document.querySelector('#Modulo')
+const ModuloButton = document.querySelector('#ModuloButton')
 const Point = document.querySelector('#Point')
 const Reinitialize = document.querySelector('#Reinitialize')
 
 
+ButtonContainer.addEventListener('click', (e => {
+    if(e.target.classlist.contains('White')) return;
+    const clickedNumber = e.target.textContent;
+
+    if(operator === ''){
+        clickedNumber = firstNumber
+    }
+    else if(operator === '=' && operator === '+' && operator === '%' && operator === '/' && operator === '-'){
+        clickedNumber = secondNumber
+    }
+}))
