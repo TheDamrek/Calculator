@@ -180,7 +180,14 @@ MultiplyButton.addEventListener('click', (e => {
 
 }))
 
+Reinitialize.addEventListener('click', (e) => {
+    NumberScreen.innerHTML = `<span>Y</span><span>o</span><span>u</span><span>r</span><span>o</span><span>p</span><span>e</span><span>r</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span><span>w</span><span>i</span><span>l</span><span>l</span><span>b</span><span>e</span><span>d</span><span>i</span><span>s</span><span>p</span><span>l</span><span>a</span><span>y</span><span>e</span><span>d</span><span>h</span><span>e</span><span>r</span><span>e</span>`;
 
+    firstNumber = '';
+    secondNumber = '';
+    operator = '';
+    lastNumber = '';
+})
 
 
 
