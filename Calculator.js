@@ -106,10 +106,10 @@ ButtonContainer.addEventListener('click', (e => {
 
         NumberScreen.textContent = firstNumber;
     }
-    else if(operator === '=' || operator === '+' || operator === '%' || operator === '/' || operator === '-'){
+    else if(operator === '=' || operator === '+' || operator === '%' || operator === '/' || operator === '-' || operator === '*'){
         secondNumber += clickedNumber;
 
-        NumberScreen.textContent = secondNumber
+        NumberScreen.textContent = firstNumber + operator + secondNumber
     }
 }
 
@@ -126,29 +126,61 @@ EqualButton.addEventListener('click', (e => {
 }))
 
 AddButton.addEventListener('click', (e => {
-     operator = '+'
+    if(firstNumber !== '' && secondNumber !== ''){
+        const result = operate(Number(firstNumber), Number(secondNumber))
+        firstNumber = result;
+        secondNumber = '';
+    }
 
+     operator = '+'
+     NumberScreen.textContent = firstNumber + '+';
 }))
 
 ModuloButton.addEventListener('click', (e => {
+
+        if(firstNumber !== '' && secondNumber !== ''){
+        const result = operate(Number(firstNumber), Number(secondNumber))
+        firstNumber = result;
+        secondNumber = '';
+    }
      operator = '%'
+     NumberScreen.textContent = firstNumber + '%';
 
 }))
 
 MinusButton.addEventListener('click', (e => {
+        if(firstNumber !== '' && secondNumber !== ''){
+        const result = operate(Number(firstNumber), Number(secondNumber))
+        firstNumber = result;
+        secondNumber = '';
+    }
      operator = '-'
+     NumberScreen.textContent = firstNumber + '-';
 
 }))
 
 DivideButton.addEventListener('click', (e => {
+        if(firstNumber !== '' && secondNumber !== ''){
+        const result = operate(Number(firstNumber), Number(secondNumber))
+        firstNumber = result;
+        secondNumber = '';
+    }
      operator = '/'
-
+     NumberScreen.textContent = firstNumber + '/';
 }))
 
 MultiplyButton.addEventListener('click', (e => {
+        if(firstNumber !== '' && secondNumber !== ''){
+        const result = operate(Number(firstNumber), Number(secondNumber))
+        firstNumber = result;
+        secondNumber = '';
+    }
      operator = '*'
+     NumberScreen.textContent = firstNumber + '*';
 
 }))
+
+
 
 
 
