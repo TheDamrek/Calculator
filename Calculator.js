@@ -101,7 +101,7 @@ ButtonContainer.addEventListener('click', (e => {
     if(operator === ''){
         firstNumber += clickedNumber;
 
-        NumberScrenn.textContent = firstNumber;
+        NumberScreen.textContent = firstNumber;
     }
     else if(operator === '=' || operator === '+' || operator === '%' || operator === '/' || operator === '-'){
         secondNumber = clickedNumber;
