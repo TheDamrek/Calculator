@@ -60,3 +60,24 @@ function operate(a, b) {
     }
 }
 
+const EqualButton = document.querySelector('#Equal')
+const AddButton = document.querySelector('#Addition')
+const MinusButton = document.querySelector('#Minus')
+const DivideButton = document.querySelector('#Divide')
+const MultiplyButton = document.querySelector('#Multiply')
+const One = document.querySelector('#One')
+const Two = document.querySelector('#Two')
+const Three = document.querySelector('#Three')
+const Four = document.querySelector('#Four')
+const Five = document.querySelector('#Five')
+const Six = document.querySelector('#Six')
+const Seven = document.querySelector('#Seven')
+const Eight = document.querySelector('#Eight')
+const Nine = document.querySelector('#Nine')
+const Zero = document.querySelector('#Zero')
+const Delete = document.querySelector('#Delete')
+const Modulo = document.querySelector('#Modulo')
+const Point = document.querySelector('#Point')
+const Reinitialize = document.querySelector('#Reinitialize')
+
+
