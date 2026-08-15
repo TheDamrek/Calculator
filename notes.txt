@@ -7,4 +7,7 @@ streamline
 use ! for when a condition isn't met
 Variable Assignment Direction: In JavaScript, the variable being updated must always go on the left, and the new value goes on the right (variable = value)
 
-+= since we're not adding anithing
++= since we're not adding anything
+
+Since we have to check for clicks on the three types of buttons, using return multiple times will just not take in consideration the precedent one.
+    So, just use an if/else dynamic

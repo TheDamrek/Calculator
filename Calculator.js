@@ -95,7 +95,10 @@ const Reinitialize = document.querySelector('#Reinitialize')
 
 
 ButtonContainer.addEventListener('click', (e => {
-    if(!e.target.classList.contains('White')) return;
+
+    
+    
+    if(e.target.classList.contains('White')) {
     const clickedNumber = e.target.textContent;
 
     if(operator === ''){
@@ -104,8 +107,49 @@ ButtonContainer.addEventListener('click', (e => {
         NumberScreen.textContent = firstNumber;
     }
     else if(operator === '=' || operator === '+' || operator === '%' || operator === '/' || operator === '-'){
-        secondNumber = clickedNumber;
+        secondNumber += clickedNumber;
 
         NumberScreen.textContent = secondNumber
     }
+}
+
+
 }))
+
+
+EqualButton.addEventListener('click', (e => {
+     if(firstNumber !== '' && secondNumber !== ''){
+        const result = operate(Number(firstNumber), Number(secondNumber));
+        NumberScreen.textContent = result;
+     }
+
+}))
+
+AddButton.addEventListener('click', (e => {
+     operator = '+'
+
+}))
+
+ModuloButton.addEventListener('click', (e => {
+     operator = '%'
+
+}))
+
+MinusButton.addEventListener('click', (e => {
+     operator = '-'
+
+}))
+
+DivideButton.addEventListener('click', (e => {
+     operator = '/'
+
+}))
+
+MultiplyButton.addEventListener('click', (e => {
+     operator = '*'
+
+}))
+
+
+
+
