@@ -181,12 +181,36 @@ MultiplyButton.addEventListener('click', (e => {
 }))
 
 Reinitialize.addEventListener('click', (e) => {
-    NumberScreen.innerHTML = `<span>Y</span><span>o</span><span>u</span><span>r</span><span>o</span><span>p</span><span>e</span><span>r</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span><span>w</span><span>i</span><span>l</span><span>l</span><span>b</span><span>e</span><span>d</span><span>i</span><span>s</span><span>p</span><span>l</span><span>a</span><span>y</span><span>e</span><span>d</span><span>h</span><span>e</span><span>r</span><span>e</span>`;
+    NumberScreen.innerHTML = `<span>Y</span><span>o</span><span>u</span><span>r</span>&nbsp;<span>o</span><span>p</span><span>e</span><span>r</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>&nbsp;<span>w</span><span>i</span><span>l</span><span>l</span>&nbsp;<span>b</span><span>e</span>&nbsp;<span>d</span><span>i</span><span>s</span><span>p</span><span>l</span><span>a</span><span>y</span><span>e</span><span>d</span>&nbsp;<span>h</span><span>e</span><span>r</span><span>e</span>`;
 
     firstNumber = '';
     secondNumber = '';
     operator = '';
     lastNumber = '';
+})
+
+
+Delete.addEventListener('click', (e) => {
+    if(secondNumber !== '') {
+        secondNumber = secondNumber.slice(0, -1);
+        NumberScreen.textContent = firstNumber + operator + secondNumber
+    }
+
+    else if(secondNumber === '' && operator !== '') {
+        operator = '';
+        NumberScreen.textContent = firstNumber;
+    }
+
+    else if(NumberScreen.textContent === firstNumber) {
+        firstNumber = firstNumber.slice(0, -1)
+        NumberScreen.textContent = firstNumber;
+
+    }
+
+    if (firstNumber === '') {
+      NumberScreen.innerHTML = `<span>Y</span><span>o</span><span>u</span><span>r</span>&nbsp;<span>o</span><span>p</span><span>e</span><span>r</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>&nbsp;<span>w</span><span>i</span><span>l</span><span>l</span>&nbsp;<span>b</span><span>e</span>&nbsp;<span>d</span><span>i</span><span>s</span><span>p</span><span>l</span><span>a</span><span>y</span><span>e</span><span>d</span>&nbsp;<span>h</span><span>e</span><span>r</span><span>e</span>`;
+    }
+    
 })
 
 
